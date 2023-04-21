@@ -13,6 +13,7 @@ const validateCardProd = (productId) => {
 
   if (!estaRepetido) {
     const product = products.find(product => product.id == productId)
+    product.quantity++
     carrito.push(product)
     renderCartProd(product)
   } else {
